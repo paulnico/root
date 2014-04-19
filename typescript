@@ -1,0 +1,737 @@
+Script started on Mon 03 Feb 2014 05:18:18 PM EST
+]0;trinity@zion: ~/roottrinity@zion:~/root$ cd ~/src
+]0;trinity@zion: ~/srctrinity@zion:~/src$ cd kern/startup/main.c
+bash: cd: kern/startup/main.c: Not a directory
+]0;trinity@zion: ~/srctrinity@zion:~/src$ cd karn[K[K[Kern/startup
+]0;trinity@zion: ~/src/kern/startuptrinity@zion:~/src/kern/startup$ ls
+main.c  menu.c
+]0;trinity@zion: ~/src/kern/startuptrinity@zion:~/src/kern/startup$ vim[K[K[Kls -l
+total 24
+-rw-rw-r-- 1 trinity trinity  5622 Feb  3 17:22 main.c
+-rw-rw-r-- 1 trinity trinity 13906 Jan 29 17:19 menu.c
+]0;trinity@zion: ~/src/kern/startuptrinity@zion:~/src/kern/startup$ cd !/[K[K~/rc[K[Ksrc
+]0;trinity@zion: ~/srctrinity@zion:~/src$ ls 0[K-la
+total 84
+drwxrwxr-x 10 trinity trinity  4096 Feb  3 15:14 [0m[01;34m.[0m
+drwxr-xr-x 25 trinity trinity  4096 Feb  3 17:22 [01;34m..[0m
+drwxrwxr-x  5 trinity trinity  4096 Jan 29 17:36 [01;34mbuild[0m
+-rw-rw-r--  1 trinity trinity 22274 Jan 29 17:19 CHANGES
+drwxrwxr-x  4 trinity trinity  4096 Jan 29 17:19 [01;34mcommon[0m
+-rwxrwxr-x  1 trinity trinity  3568 Jan 29 17:19 [01;32mconfigure[0m
+-rw-rw-r--  1 trinity trinity   792 Jan 29 17:41 defs.mk
+drwxrwxr-x  2 trinity trinity  4096 Jan 29 17:19 [01;34mdesign[0m
+drwxrwxr-x  8 trinity trinity  4096 Jan 29 17:19 [01;34m.git[0m
+-rw-rw-r--  1 trinity trinity   103 Jan 29 17:19 .gitignore
+drwxrwxr-x 16 trinity trinity  4096 Jan 29 17:19 [01;34mkern[0m
+-rw-rw-r--  1 trinity trinity  1560 Jan 29 17:19 Makefile
+drwxrwxr-x 10 trinity trinity  4096 Jan 29 17:19 [01;34mman[0m
+drwxrwxr-x  2 trinity trinity  4096 Jan 29 17:19 [01;34mmk[0m
+-rw-rw-r--  1 trinity trinity   854 Feb  3 15:15 typescript
+drwxrwxr-x  7 trinity trinity  4096 Jan 29 17:37 [01;34muser[0m
+]0;trinity@zion: ~/srctrinity@zion:~/src$ git [K sa[Ktatus
+# On branch master
+# Changes not staged for commit:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	modified:   kern/startup/main.c
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	typescript
+no changes added to commit (use "git add" and/or "git commit -a")
+]0;trinity@zion: ~/srctrinity@zion:~/src$ git git di[K[K-no[K[K[K-[Kdiff
+git: 'git' is not a git command. See 'git --help'.
+
+Did you mean this?
+	init
+]0;trinity@zion: ~/srctrinity@zion:~/src$ git diff
+[?1h=diff --git a/kern/startup/main.c b/kern/startup/main.c[m
+index be4c4b8..1e08ca3 100644[m
+--- a/kern/startup/main.c[m
++++ b/kern/startup/main.c[m
+@@ -1,3 +1,4 @@[m
++/* paulnico */[m
+ /*[m
+  * Copyright (c) 2000, 2001, 2002, 2003, 2004, 2005, 2008, 2009[m
+  *     The President and Fellows of Harvard College.[m
+[K[?1l>]0;trinity@zion: ~/srctrinity@zion:~/src$ cd -
+/home/trinity/src/kern/startup
+]0;trinity@zion: ~/src/kern/startuptrinity@zion:~/src/kern/startup$ git add main.c
+]0;trinity@zion: ~/src/kern/startuptrinity@zion:~/src/kern/startup$ gitt[K -m c[K"using git"[K[K[K[K[K[K[K[K[K[K[K[K[K[Kcommit -m "As[KSST9[K0"
+[master 6356827] ASST0
+ Committer: ops-class.org Student <trinity@zion.(none)>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+]0;trinity@zion: ~/src/kern/startuptrinity@zion:~/src/kern/startup$ git config --global user.name
+]0;trinity@zion: ~/src/kern/startuptrinity@zion:~/src/kern/startup$ git [K[K[K[Kgit status
+# On branch master
+# Your branch is ahead of 'origin/master' by 1 commit.
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	../../typescript
+nothing added to commit but untracked files present (use "git add" to track)
+]0;trinity@zion: ~/src/kern/startuptrinity@zion:~/src/kern/startup$ git reset --hard
+HEAD is now at 6356827 ASST0
+]0;trinity@zion: ~/src/kern/startuptrinity@zion:~/src/kern/startup$ git reset --hard HEAD
+HEAD is now at 6356827 ASST0
+]0;trinity@zion: ~/src/kern/startuptrinity@zion:~/src/kern/startup$ git on[K[Kconfig --b[Kglobal usern[K.naem[K[K[Kame Paul Nicotera
+]0;trinity@zion: ~/src/kern/startuptrinity@zion:~/src/kern/startup$ git help
+usage: git [--version] [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p|--paginate|--no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [-c name=value] [--help]
+           <command> [<args>]
+
+The most commonly used git commands are:
+   add        Add file contents to the index
+   bisect     Find by binary search the change that introduced a bug
+   branch     List, create, or delete branches
+   checkout   Checkout a branch or paths to the working tree
+   clone      Clone a repository into a new directory
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   fetch      Download objects and refs from another repository
+   grep       Print lines matching a pattern
+   init       Create an empty git repository or reinitialize an existing one
+   log        Show commit logs
+   merge      Join two or more development histories together
+   mv         Move or rename a file, a directory, or a symlink
+   pull       Fetch from and merge with another repository or a local branch
+   push       Update remote refs along with associated objects
+   rebase     Forward-port local commits to the updated upstream head
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+   show       Show various types of objects
+   status     Show the working tree status
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+See 'git help <command>' for more information on a specific command.
+]0;trinity@zion: ~/src/kern/startuptrinity@zion:~/src/kern/startup$ git config --global user.email paulnico@buffalo .edu
+]0;trinity@zion: ~/src/kern/startuptrinity@zion:~/src/kern/startup$ git config --global --d[Kedit
+[?1049h[1;24r(B[m[4l[?7h[?12l[?25h[?1h=[?1h=[?1h=[39;49m[39;49m(B[m[H[2J(B[0;7m  GNU nano 2.2.6         File: /home/trinity/.gitconfig                         [3;1H(B[m[user][4d  name = Paul[5;9Hemail = paulnico@buffalo.edu[22;33H(B[0;7m[ Read 3 lines ][23d^G(B[m Get Help  (B[0;7m^O(B[m WriteOut  (B[0;7m^R(B[m Read File (B[0;7m^Y(B[m Prev Page (B[0;7m^K(B[m Cut Text  (B[0;7m^C(B[m Cur Pos[24d(B[0;7m^X(B[m Exit[14G(B[0;7m^J(B[m Justify   (B[0;7m^W(B[m Where Is  (B[0;7m^V(B[m Next Page (B[0;7m^U(B[m UnCut Text(B[0;7m^T(B[m To Spell[3d[4d[4;9Hname = Paul[1;71H(B[0;7mModified[4;21H(B[mNicotera[22d[K[4;25H[1P_Nicotera[4;21H^Nicotera[4;22H[1P[22d(B[0;7mFile Name to Write: /home/trinity/.gitconfig                                    [23;14H(B[m       (B[0;7mM-D(B[m DOS Format      (B[0;7mM-A(B[m Append          (B[0;7mM-B(B[m Backup File[24;2H(B[0;7mC(B[m Cancel           (B[0;7mM-M(B[m Mac Format      (B[0;7mM-P(B[m Prepend[K[22;45H[1;71H[39;49m(B[0;7m        [22;31H(B[m[1K (B[0;7m[ Wrote 3 lines ](B[m[K[23;14H(B[0;7m^O(B[m WriteOut  (B[0;7m^R(B[m Read File (B[0;7m^Y(B[m Prev Page (B[0;7m^K(B[m Cut Text  (B[0;7m^C(B[m Cur Pos[24;2H(B[0;7mX(B[m Exit      (B[0;7m^J(B[m Justify   (B[0;7m^W(B[m Where Is  (B[0;7m^V(B[m Next Page (B[0;7m^U(B[m UnCut Text(B[0;7m^T(B[m To Spell[4;21H[23d[J[24;80H[24;1H[?1049l[?1l>]0;trinity@zion: ~/src/kern/startuptrinity@zion:~/src/kern/startup$ git config --global --edit
+[?1049h[1;24r(B[m[4l[?7h[?12l[?25h[?1h=[?1h=[?1h=[39;49m[39;49m(B[m[H[2J(B[0;7m  GNU nano 2.2.6         File: /home/trinity/.gitconfig                         [3;1H(B[m[user][4d  name = Paul_Nicotera[5;9Hemail = paulnico@buffalo.edu[22;33H(B[0;7m[ Read 3 lines ][23d^G(B[m Get Help  (B[0;7m^O(B[m WriteOut  (B[0;7m^R(B[m Read File (B[0;7m^Y(B[m Prev Page (B[0;7m^K(B[m Cut Text  (B[0;7m^C(B[m Cur Pos[24d(B[0;7m^X(B[m Exit[14G(B[0;7m^J(B[m Justify   (B[0;7m^W(B[m Where Is  (B[0;7m^V(B[m Next Page (B[0;7m^U(B[m UnCut Text(B[0;7m^T(B[m To Spell[3d[22d(B[0;7mFile Name to Write: /home/trinity/.gitconfig                                    [23;14H(B[m       (B[0;7mM-D(B[m DOS Format      (B[0;7mM-A(B[m Append          (B[0;7mM-B(B[m Backup File[24;2H(B[0;7mC(B[m Cancel           (B[0;7mM-M(B[m Mac Format      (B[0;7mM-P(B[m Prepend[K[22;45H[22;33H[1K (B[0;7m[ Cancelled ](B[m[K[23;14H(B[0;7m^O(B[m WriteOut  (B[0;7m^R(B[m Read File (B[0;7m^Y(B[m Prev Page (B[0;7m^K(B[m Cut Text  (B[0;7m^C(B[m Cur Pos[24;2H(B[0;7mX(B[m Exit      (B[0;7m^J(B[m Justify   (B[0;7m^W(B[m Where Is  (B[0;7m^V(B[m Next Page (B[0;7m^U(B[m UnCut Text(B[0;7m^T(B[m To Spell[3d[23d[J[24;80H[24;1H[?1049l[?1l>]0;trinity@zion: ~/src/kern/startuptrinity@zion:~/src/kern/startup$ git config --global --edit
+[?1049h[1;24r(B[m[4l[?7h[?12l[?25h[?1h=[?1h=[?1h=[39;49m[39;49m(B[m[H[2J(B[0;7m  GNU nano 2.2.6         File: /home/trinity/.gitconfig                         [3;1H(B[m[user][4d  name = Paul_Nicotera[5;9Hemail = paulnico@buffalo.edu[22;33H(B[0;7m[ Read 3 lines ][23d^G(B[m Get Help  (B[0;7m^O(B[m WriteOut  (B[0;7m^R(B[m Read File (B[0;7m^Y(B[m Prev Page (B[0;7m^K(B[m Cut Text  (B[0;7m^C(B[m Cur Pos[24d(B[0;7m^X(B[m Exit[14G(B[0;7m^J(B[m Justify   (B[0;7m^W(B[m Where Is  (B[0;7m^V(B[m Next Page (B[0;7m^U(B[m UnCut Text(B[0;7m^T(B[m To Spell[3d[23d[J[24;80H[24;1H[?1049l[?1l>]0;trinity@zion: ~/src/kern/startuptrinity@zion:~/src/kern/startup$ cd ..[K[K[K ../..
+]0;trinity@zion: ~/srctrinity@zion:~/src$ cd .git
+]0;trinity@zion: ~/src/.gittrinity@zion:~/src/.git$ more config
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[remote "origin"]
+	fetch = +refs/heads/*:refs/remotes/origin/*
+	url = ssh://src@src.ops-class.org/src/os161
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
+]0;trinity@zion: ~/src/.gittrinity@zion:~/src/.git$ ls
+[0m[01;34mbranches[0m        config       HEAD   index  [01;34mlogs[0m     ORIG_HEAD    [01;34mrefs[0m
+COMMIT_EDITMSG  description  [01;34mhooks[0m  [01;34minfo[0m   [01;34mobjects[0m  packed-refs
+]0;trinity@zion: ~/src/.gittrinity@zion:~/src/.git$ ls -la
+total 116
+drwxrwxr-x  8 trinity trinity  4096 Feb  3 17:43 [0m[01;34m.[0m
+drwxrwxr-x 10 trinity trinity  4096 Feb  3 15:14 [01;34m..[0m
+drwxrwxr-x  2 trinity trinity  4096 Jan 29 17:19 [01;34mbranches[0m
+-rw-rw-r--  1 trinity trinity     6 Feb  3 17:28 COMMIT_EDITMSG
+-rw-rw-r--  1 trinity trinity   262 Jan 29 17:19 config
+-rw-rw-r--  1 trinity trinity    73 Jan 29 17:19 description
+-rw-rw-r--  1 trinity trinity    23 Jan 29 17:19 HEAD
+drwxrwxr-x  2 trinity trinity  4096 Jan 29 17:19 [01;34mhooks[0m
+-rw-rw-r--  1 trinity trinity 59542 Feb  3 17:43 index
+drwxrwxr-x  2 trinity trinity  4096 Jan 29 17:19 [01;34minfo[0m
+drwxrwxr-x  3 trinity trinity  4096 Jan 29 17:19 [01;34mlogs[0m
+drwxrwxr-x  9 trinity trinity  4096 Feb  3 17:28 [01;34mobjects[0m
+-rw-rw-r--  1 trinity trinity    41 Feb  3 17:40 ORIG_HEAD
+-rw-rw-r--  1 trinity trinity   200 Jan 29 17:19 packed-refs
+drwxrwxr-x  5 trinity trinity  4096 Jan 29 17:19 [01;34mrefs[0m
+]0;trinity@zion: ~/src/.gittrinity@zion:~/src/.git$ cd ..
+]0;trinity@zion: ~/srctrinity@zion:~/src$ ls
+[0m[01;34mbuild[0m    [01;34mcommon[0m     defs.mk  [01;34mkern[0m      [01;34mman[0m  typescript
+CHANGES  [01;32mconfigure[0m  [01;34mdesign[0m   Makefile  [01;34mmk[0m   [01;34muser[0m
+]0;trinity@zion: ~/srctrinity@zion:~/src$ ls -la
+total 84
+drwxrwxr-x 10 trinity trinity  4096 Feb  3 15:14 [0m[01;34m.[0m
+drwxr-xr-x 25 trinity trinity  4096 Feb  4 17:52 [01;34m..[0m
+drwxrwxr-x  5 trinity trinity  4096 Jan 29 17:36 [01;34mbuild[0m
+-rw-rw-r--  1 trinity trinity 22274 Jan 29 17:19 CHANGES
+drwxrwxr-x  4 trinity trinity  4096 Jan 29 17:19 [01;34mcommon[0m
+-rwxrwxr-x  1 trinity trinity  3568 Jan 29 17:19 [01;32mconfigure[0m
+-rw-rw-r--  1 trinity trinity   792 Jan 29 17:41 defs.mk
+drwxrwxr-x  2 trinity trinity  4096 Jan 29 17:19 [01;34mdesign[0m
+drwxrwxr-x  8 trinity trinity  4096 Feb  3 17:43 [01;34m.git[0m
+-rw-rw-r--  1 trinity trinity   103 Jan 29 17:19 .gitignore
+drwxrwxr-x 16 trinity trinity  4096 Jan 29 17:19 [01;34mkern[0m
+-rw-rw-r--  1 trinity trinity  1560 Jan 29 17:19 Makefile
+drwxrwxr-x 10 trinity trinity  4096 Jan 29 17:19 [01;34mman[0m
+drwxrwxr-x  2 trinity trinity  4096 Jan 29 17:19 [01;34mmk[0m
+-rw-rw-r--  1 trinity trinity   854 Feb  3 15:15 typescript
+drwxrwxr-x  7 trinity trinity  4096 Jan 29 17:37 [01;34muser[0m
+]0;trinity@zion: ~/srctrinity@zion:~/src$ vim [K[K[K[Kmore .gitignore 
+.depend
+.settings
+.project
+.cproject
+/kern/compile/
+defs.mk
+build
+/user/testbin/randcall/calls.c
+*.swp
+]0;trinity@zion: ~/srctrinity@zion:~/src$ git status
+# On branch master
+# Your branch is ahead of 'origin/master' by 1 commit.
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	kern/startup/main.test
+#	typescript
+nothing added to commit but untracked files present (use "git add" to track)
+]0;trinity@zion: ~/srctrinity@zion:~/src$ git diff
+[?1h=[K[?1l>]0;trinity@zion: ~/srctrinity@zion:~/src$ git commit
+# On branch master
+# Your branch is ahead of 'origin/master' by 1 commit.
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	kern/startup/main.test
+#	typescript
+nothing added to commit but untracked files present (use "git add" to track)
+]0;trinity@zion: ~/srctrinity@zion:~/src$ git reset -[KHEAD[K[K[K[K[K[K[K[K[K[K[K[K[K[Kman git reset
+[?1049h[?1h=GIT-RESET(1)                      Git Manual                      GIT-RESET(1)[m
+[m
+[1mNAME[0m[m
+       git-reset - Reset current HEAD to the specified state[m
+[m
+[1mSYNOPSIS[0m[m
+       [4mgit[24m [4mreset[24m [-q] [<commit>] [--] <paths>...[m
+       [4mgit[24m [4mreset[24m (--patch | -p) [<commit>] [--] [<paths>...][m
+       [4mgit[24m [4mreset[24m (--soft | --mixed | --hard | --merge | --keep) [-q] [<commit>][m
+[m
+[1mDESCRIPTION[0m[m
+       In the first and second form, copy entries from <commit> to the index.[m
+       In the third form, set the current branch head (HEAD) to <commit>,[m
+       optionally modifying index and working tree to match. The <commit>[m
+       defaults to HEAD in all forms.[m
+[m
+       [4mgit[24m [4mreset[24m [-q] [<commit>] [--] <paths>...[m
+           This form resets the index entries for all <paths> to their state[m
+           at <commit>. (It does not affect the working tree, nor the current[m
+           branch.)[m
+[m
+           This means that git reset <paths> is the opposite of git add[m
+           <paths>.[m
+[7m Manual page git-reset(1) line 1 (press h for help or q to quit)[27m[K[K[m
+           After running git reset <paths> to update the index entry, you can[m
+           use [1mgit-checkout[0m(1) to check the contents out of the index to the[m
+           working tree. Alternatively, using [1mgit-checkout[0m(1) and specifying a[m
+           commit, you can copy the contents of a path out of a commit to the[m
+           index and to the working tree in one go.[m
+[m
+       [4mgit[24m [4mreset[24m (--patch | -p) [<commit>] [--] [<paths>...][m
+           Interactively select hunks in the difference between the index and[m
+           <commit> (defaults to HEAD). The chosen hunks are applied in[m
+           reverse to the index.[m
+[m
+           This means that git reset -p is the opposite of git add -p, i.e.[m
+           you can use it to selectively reset hunks. See the “Interactive[m
+           Mode” section of [1mgit-add[0m(1) to learn how to operate the --patch[m
+           mode.[m
+[m
+       [4mgit[24m [4mreset[24m --<mode> [<commit>][m
+           This form resets the current branch head to <commit> and possibly[m
+           updates the index (resetting it to the tree of <commit>) and the[m
+           working tree depending on <mode>, which must be one of the[m
+           following:[m
+[m
+[7m Manual page git-reset(1) line 27 (press h for help or q to quit)[27m[K[K           --soft[m
+               Does not touch the index file nor the working tree at all (but[m
+               resets the head to <commit>, just like all modes do). This[m
+               leaves all your changed files "Changes to be committed", as [4mgit[24m[m
+               [4mstatus[24m would put it.[m
+[m
+           --mixed[m
+               Resets the index but not the working tree (i.e., the changed[m
+               files are preserved but not marked for commit) and reports what[m
+               has not been updated. This is the default action.[m
+[m
+           --hard[m
+               Resets the index and working tree. Any changes to tracked files[m
+               in the working tree since <commit> are discarded.[m
+[m
+           --merge[m
+               Resets the index and updates the files in the working tree that[m
+               are different between <commit> and HEAD, but keeps those which[m
+               are different between the index and working tree (i.e. which[m
+               have changes which have not been added). If a file that is[m
+               different between <commit> and the index has unstaged changes,[m
+               reset is aborted.[m
+[m
+[7m Manual page git-reset(1) line 50 (press h for help or q to quit)[27m[K[K               In other words, --merge does something like a [4mgit[24m [4mread-tree[24m [4m-u[24m[m
+               [4m-m[24m [4m<commit>[24m, but carries forward unmerged index entries.[m
+[m
+           --keep[m
+               Resets index entries and updates files in the working tree that[m
+               are different between <commit> and HEAD. If a file that is[m
+               different between <commit> and HEAD has local changes, reset is[m
+               aborted.[m
+[m
+       If you want to undo a commit other than the latest on a branch, [1mgit-[0m[m
+       [1mrevert[0m(1) is your friend.[m
+[m
+[1mOPTIONS[0m[m
+       -q, --quiet[m
+           Be quiet, only report errors.[m
+[m
+[1mEXAMPLES[0m[m
+       Undo add[m
+[m
+               $ edit                                     [1m(1)[0m[m
+               $ git add frotz.c filfre.c[m
+               $ mailx                                    [1m(2)[0m[m
+               $ git reset                                [1m(3)[0m[m
+[7m Manual page git-reset(1) line 73 (press h for help or q to quit)[27m[K[K               $ git pull git://info.example.com/ nitfol  [1m(4)[0m[m
+[m
+           [1m1.[0m You are happily working on something, and find the changes in[m
+           these files are in good order. You do not want to see them when you[m
+           run "git diff", because you plan to work on other files and changes[m
+           with these files are distracting.[m
+           [1m2.[0m Somebody asks you to pull, and the changes sounds worthy of[m
+           merging.[m
+           [1m3.[0m However, you already dirtied the index (i.e. your index does not[m
+           match the HEAD commit). But you know the pull you are going to make[m
+           does not affect frotz.c nor filfre.c, so you revert the index[m
+           changes for these two files. Your changes in working tree remain[m
+           there.[m
+           [1m4.[0m Then you can pull and merge, leaving frotz.c and filfre.c[m
+           changes still in the working tree.[m
+[m
+       Undo a commit and redo[m
+[m
+               $ git commit ...[m
+               $ git reset --soft HEAD^      [1m(1)[0m[m
+               $ edit                        [1m(2)[0m[m
+               $ git commit -a -c ORIG_HEAD  [1m(3)[0m[m
+[m
+[7m Manual page git-reset(1) line 96 (press h for help or q to quit)[27m[K[K           [1m1.[0m This is most often done when you remembered what you just[m
+           committed is incomplete, or you misspelled your commit message, or[m
+           both. Leaves working tree as it was before "reset".[m
+           [1m2.[0m Make corrections to working tree files.[m
+           [1m3.[0m "reset" copies the old head to .git/ORIG_HEAD; redo the commit[m
+           by starting with its log message. If you do not need to edit the[m
+           message further, you can give -C option instead.[m
+[m
+           See also the --amend option to [1mgit-commit[0m(1).[m
+[m
+       Undo a commit, making it a topic branch[m
+[m
+               $ git branch topic/wip     [1m(1)[0m[m
+               $ git reset --hard HEAD~3  [1m(2)[0m[m
+               $ git checkout topic/wip   [1m(3)[0m[m
+[m
+           [1m1.[0m You have made some commits, but realize they were premature to[m
+           be in the "master" branch. You want to continue polishing them in a[m
+           topic branch, so create "topic/wip" branch off of the current HEAD.[m
+           [1m2.[0m Rewind the master branch to get rid of those three commits.[m
+           [1m3.[0m Switch to "topic/wip" branch and keep working.[m
+[m
+       Undo commits permanently[m
+[7m Manual page git-reset(1) line 119 (press h for help or q to quit)[27m[K[K[HM[m
+[24;1H[K[7m Manual page git-reset(1) line 118 (press h for help or q to quit)[27m[K[K[HM               $ git commit -a -c ORIG_HEAD  [1m(3)[0m[m
+[24;1H[K[7m Manual page git-reset(1) line 117 (press h for help or q to quit)[27m[K[K[HM               $ edit                        [1m(2)[0m[m
+[24;1H[K[7m Manual page git-reset(1) line 116 (press h for help or q to quit)[27m[K[K[HM               $ git reset --soft HEAD^      [1m(1)[0m[m
+[24;1H[K[7m Manual page git-reset(1) line 115 (press h for help or q to quit)[27m[K[K[HM               $ git commit ...[m
+[24;1H[K[7m Manual page git-reset(1) line 114 (press h for help or q to quit)[27m[K[K[HM[m
+[24;1H[K[7m Manual page git-reset(1) line 113 (press h for help or q to quit)[27m[K[K[HM       Undo a commit and redo[m
+[24;1H[K[7m Manual page git-reset(1) line 112 (press h for help or q to quit)[27m[K[K[HM[m
+[24;1H[K[7m Manual page git-reset(1) line 111 (press h for help or q to quit)[27m[K[K[HM           changes still in the working tree.[m
+[24;1H[K[7m Manual page git-reset(1) line 110 (press h for help or q to quit)[27m[K[K[HM           [1m4.[0m Then you can pull and merge, leaving frotz.c and filfre.c[m
+[24;1H[K[7m Manual page git-reset(1) line 109 (press h for help or q to quit)[27m[K[K[HM           there.[m
+[24;1H[K[7m Manual page git-reset(1) line 108 (press h for help or q to quit)[27m[K[K[HM           changes for these two files. Your changes in working tree remain[m
+[24;1H[K[7m Manual page git-reset(1) line 107 (press h for help or q to quit)[27m[K[K[HM           does not affect frotz.c nor filfre.c, so you revert the index[m
+[24;1H[K[7m Manual page git-reset(1) line 106 (press h for help or q to quit)[27m[K[K[HM           match the HEAD commit). But you know the pull you are going to make[m
+[24;1H[K[7m Manual page git-reset(1) line 105 (press h for help or q to quit)[27m[K[K[HM           [1m3.[0m However, you already dirtied the index (i.e. your index does not[m
+[24;1H[K[7m Manual page git-reset(1) line 104 (press h for help or q to quit)[27m[K[K[HM           merging.[m
+[24;1H[K[7m Manual page git-reset(1) line 103 (press h for help or q to quit)[27m[K[K[HM           [1m2.[0m Somebody asks you to pull, and the changes sounds worthy of[m
+[24;1H[K[7m Manual page git-reset(1) line 102 (press h for help or q to quit)[27m[K[K           message further, you can give -C option instead.[m
+[m
+           See also the --amend option to [1mgit-commit[0m(1).[m
+[m
+       Undo a commit, making it a topic branch[m
+[m
+               $ git branch topic/wip     [1m(1)[0m[m
+               $ git reset --hard HEAD~3  [1m(2)[0m[m
+               $ git checkout topic/wip   [1m(3)[0m[m
+[m
+           [1m1.[0m You have made some commits, but realize they were premature to[m
+           be in the "master" branch. You want to continue polishing them in a[m
+           topic branch, so create "topic/wip" branch off of the current HEAD.[m
+           [1m2.[0m Rewind the master branch to get rid of those three commits.[m
+           [1m3.[0m Switch to "topic/wip" branch and keep working.[m
+[m
+       Undo commits permanently[m
+[m
+               $ git commit ...[m
+               $ git reset --hard HEAD~3   [1m(1)[0m[m
+[m
+           [1m1.[0m The last three commits (HEAD, HEAD^, and HEAD~2) were bad and[m
+           you do not want to ever see them again. Do [1mnot[0m do this if you have[m
+[7m Manual page git-reset(1) line 125 (press h for help or q to quit)[27m[K[K           already given these commits to somebody else. (See the "RECOVERING[m
+           FROM UPSTREAM REBASE" section in [1mgit-rebase[0m(1) for the implications[m
+           of doing so.)[m
+[m
+       Undo a merge or pull[m
+[m
+               $ git pull                         [1m(1)[0m[m
+               Auto-merging nitfol[m
+               CONFLICT (content): Merge conflict in nitfol[m
+               Automatic merge failed; fix conflicts and then commit the result.[m
+               $ git reset --hard                 [1m(2)[0m[m
+               $ git pull . topic/branch          [1m(3)[0m[m
+               Updating from 41223... to 13134...[m
+               Fast-forward[m
+               $ git reset --hard ORIG_HEAD       [1m(4)[0m[m
+[m
+           [1m1.[0m Try to update from the upstream resulted in a lot of conflicts;[m
+           you were not ready to spend a lot of time merging right now, so you[m
+           decide to do that later.[m
+           [1m2.[0m "pull" has not made merge commit, so "git reset --hard" which is[m
+           a synonym for "git reset --hard HEAD" clears the mess from the[m
+           index file and the working tree.[m
+           [1m3.[0m Merge a topic branch into the current branch, which resulted in[m
+[7m Manual page git-reset(1) line 148 (press h for help or q to quit)[27m[K[K           a fast-forward.[m
+           [1m4.[0m But you decided that the topic branch is not ready for public[m
+           consumption yet. "pull" or "merge" always leaves the original tip[m
+           of the current branch in ORIG_HEAD, so resetting hard to it brings[m
+           your index file and the working tree back to that state, and resets[m
+           the tip of the branch to that commit.[m
+[m
+       Undo a merge or pull inside a dirty working tree[m
+[m
+               $ git pull                         [1m(1)[0m[m
+               Auto-merging nitfol[m
+               Merge made by recursive.[m
+                nitfol                |   20 +++++----[m
+                ...[m
+               $ git reset --merge ORIG_HEAD      [1m(2)[0m[m
+[m
+           [1m1.[0m Even if you may have local modifications in your working tree,[m
+           you can safely say "git pull" when you know that the change in the[m
+           other branch does not overlap with them.[m
+           [1m2.[0m After inspecting the result of the merge, you may find that the[m
+           change in the other branch is unsatisfactory. Running "git reset[m
+           --hard ORIG_HEAD" will let you go back to where you were, but it[m
+           will discard your local changes, which you do not want. "git reset[m
+[7m Manual page git-reset(1) line 171 (press h for help or q to quit)[27m[K[K           --merge" keeps your local changes.[m
+[m
+       Interrupted workflow[m
+           Suppose you are interrupted by an urgent fix request while you are[m
+           in the middle of a large change. The files in your working tree are[m
+           not in any shape to be committed yet, but you need to get to the[m
+           other branch for a quick bugfix.[m
+[m
+               $ git checkout feature ;# you were working in "feature" branch an[m d[m
+               $ work work work       ;# got interrupted[m
+               $ git commit -a -m "snapshot WIP"                 [1m(1)[0m[m
+               $ git checkout master[m
+               $ fix fix fix[m
+               $ git commit ;# commit with real log[m
+               $ git checkout feature[m
+               $ git reset --soft HEAD^ ;# go back to WIP state  [1m(2)[0m[m
+               $ git reset                                       [1m(3)[0m[m
+[m
+           [1m1.[0m This commit will get blown away so a throw-away log message is[m
+           OK.[m
+           [1m2.[0m This removes the [4mWIP[24m commit from the commit history, and sets[m
+           your working tree to the state just before you made that snapshot.[m
+[7m Manual page git-reset(1) line 194 (press h for help or q to quit)[27m[K[K           [1m3.[0m At this point the index file still has all the WIP changes you[m
+           committed as [4msnapshot[24m [4mWIP[24m. This updates the index to show your WIP[m
+           files as uncommitted.[m
+[m
+           See also [1mgit-stash[0m(1).[m
+[m
+       Reset a single file in the index[m
+           Suppose you have added a file to your index, but later decide you[m
+           do not want to add it to your commit. You can remove the file from[m
+           the index while keeping your changes with git reset.[m
+[m
+               $ git reset -- frotz.c                      [1m(1)[0m[m
+               $ git commit -m "Commit files in index"     [1m(2)[0m[m
+               $ git add frotz.c                           [1m(3)[0m[m
+[m
+           [1m1.[0m This removes the file from the index while keeping it in the[m
+           working directory.[m
+           [1m2.[0m This commits all other changes in the index.[m
+           [1m3.[0m Adds the file to the index again.[m
+[m
+       Keep changes in working tree while discarding some previous commits[m
+           Suppose you are working on something and you commit it, and then[m
+           you continue working a bit more, but now you think that what you[m
+[7m Manual page git-reset(1) line 216 (press h for help or q to quit)[27m[K[K           have in your working tree should be in another branch that has[m
+           nothing to do with what you committed previously. You can start a[m
+           new branch and reset it while keeping the changes in your working[m
+           tree.[m
+[m
+               $ git tag start[m
+               $ git checkout -b branch1[m
+               $ edit[m
+               $ git commit ...                            [1m(1)[0m[m
+               $ edit[m
+               $ git checkout -b branch2                   [1m(2)[0m[m
+               $ git reset --keep start                    [1m(3)[0m[m
+[m
+           [1m1.[0m This commits your first edits in branch1.[m
+           [1m2.[0m In the ideal world, you could have realized that the earlier[m
+           commit did not belong to the new topic when you created and[m
+           switched to branch2 (i.e. "git checkout -b branch2 start"), but[m
+           nobody is perfect.[m
+           [1m3.[0m But you can use "reset --keep" to remove the unwanted commit[m
+           after you switched to "branch2".[m
+[m
+[1mDISCUSSION[0m[m
+       The tables below show what happens when running:[m
+[7m Manual page git-reset(1) line 239 (press h for help or q to quit)[27m[K[K[m
+           git reset --option target[m
+[m
+       to reset the HEAD to another commit (target) with the different reset[m
+       options depending on the state of the files.[m
+[m
+       In these tables, A, B, C and D are some different states of a file. For[m
+       example, the first line of the first table means that if a file is in[m
+       state A in the working tree, in state B in the index, in state C in[m
+       HEAD and in state D in the target, then "git reset --soft target" will[m
+       leave the file in the working tree in state A and in the index in state[m
+       B. It resets (i.e. moves) the HEAD (i.e. the tip of the current branch,[m
+       if you are on one) to "target" (which has the file in state D).[m
+[m
+           working index HEAD target         working index HEAD[m
+           ----------------------------------------------------[m
+            A       B     C    D     --soft   A       B     D[m
+                                     --mixed  A       D     D[m
+                                     --hard   D       D     D[m
+                                     --merge (disallowed)[m
+                                     --keep  (disallowed)[m
+[m
+           working index HEAD target         working index HEAD[m
+[7m Manual page git-reset(1) line 262 (press h for help or q to quit)[27m[K[K           ----------------------------------------------------[m
+            A       B     C    C     --soft   A       B     C[m
+                                     --mixed  A       C     C[m
+                                     --hard   C       C     C[m
+                                     --merge (disallowed)[m
+                                     --keep   A       C     C[m
+[m
+           working index HEAD target         working index HEAD[m
+           ----------------------------------------------------[m
+            B       B     C    D     --soft   B       B     D[m
+                                     --mixed  B       D     D[m
+                                     --hard   D       D     D[m
+                                     --merge  D       D     D[m
+                                     --keep  (disallowed)[m
+[m
+           working index HEAD target         working index HEAD[m
+           ----------------------------------------------------[m
+            B       B     C    C     --soft   B       B     C[m
+                                     --mixed  B       C     C[m
+                                     --hard   C       C     C[m
+                                     --merge  C       C     C[m
+                                     --keep   B       C     C[m
+[m
+[7m Manual page git-reset(1) line 286 (press h for help or q to quit)[27m[K[K           working index HEAD target         working index HEAD[m
+           ----------------------------------------------------[m
+            B       C     C    D     --soft   B       C     D[m
+                                     --mixed  B       D     D[m
+                                     --hard   D       D     D[m
+                                     --merge (disallowed)[m
+                                     --keep  (disallowed)[m
+[m
+           working index HEAD target         working index HEAD[m
+           ----------------------------------------------------[m
+            B       C     C    C     --soft   B       C     C[m
+                                     --mixed  B       C     C[m
+                                     --hard   C       C     C[m
+                                     --merge  B       C     C[m
+                                     --keep   B       C     C[m
+[m
+       "reset --merge" is meant to be used when resetting out of a conflicted[m
+       merge. Any mergy operation guarantees that the working tree file that[m
+       is involved in the merge does not have local change wrt the index[m
+       before it starts, and that it writes the result out to the working[m
+       tree. So if we see some difference between the index and the target and[m
+       also between the index and the working tree, then it means that we are[m
+       not resetting out from a state that a mergy operation left after[m
+[7m Manual page git-reset(1) line 309 (press h for help or q to quit)[27m[K[K       failing with a conflict. That is why we disallow --merge option in this[m
+       case.[m
+[m
+       "reset --keep" is meant to be used when removing some of the last[m
+       commits in the current branch while keeping changes in the working[m
+       tree. If there could be conflicts between the changes in the commit we[m
+       want to remove and the changes in the working tree we want to keep, the[m
+       reset is disallowed. That’s why it is disallowed if there are both[m
+       changes between the working tree and HEAD, and between HEAD and the[m
+       target. To be safe, it is also disallowed when there are unmerged[m
+       entries.[m
+[m
+       The following tables show what happens when there are unmerged entries:[m
+[m
+           working index HEAD target         working index HEAD[m
+           ----------------------------------------------------[m
+            X       U     A    B     --soft  (disallowed)[m
+                                     --mixed  X       B     B[m
+                                     --hard   B       B     B[m
+                                     --merge  B       B     B[m
+                                     --keep  (disallowed)[m
+[m
+           working index HEAD target         working index HEAD[m
+[7m Manual page git-reset(1) line 332 (press h for help or q to quit)[27m[K[K           ----------------------------------------------------[m
+            X       U     A    A     --soft  (disallowed)[m
+                                     --mixed  X       A     A[m
+                                     --hard   A       A     A[m
+                                     --merge  A       A     A[m
+                                     --keep  (disallowed)[m
+[m
+       X means any state and U means an unmerged index.[m
+[m
+[1mGIT[0m[m
+       Part of the [1mgit[0m(1) suite[m
+[m
+Git 1.7.10.4                      09/27/2012                      GIT-RESET(1)[m
+[7m Manual page git-reset(1) line 345/369 (END) (press h for help or q to quit)[27m[K[K[K[7m Manual page git-reset(1) line 345/369 (END) (press h for help or q to quit)[27m[K[K[K[7m Manual page git-reset(1) line 345/369 (END) (press h for help or q to quit)[27m[K[K[?1l>[?1049l]0;trinity@zion: ~/srctrinity@zion:~/src$ git log
+[?1h=commit 63568271dd3c039a85332b9717305bc92a571c3c[m
+Author: ops-class.org Student <trinity@zion.(none)>[m
+Date:   Mon Feb 3 17:28:24 2014 -0500[m
+[m
+    ASST0[m
+[m
+commit 3921f59764fb3e6fba924a080af12f5282abdb5c[m
+Author: Geoffrey Challen <challen@buffalo.edu>[m
+Date:   Fri Feb 15 10:45:00 2013 -0500[m
+[m
+    Refactoring spinner and yielder code.[m
+[m
+commit bad912f193cc3b548d881afff35dc771778c0d24[m
+Author: Geoffrey Challen <challen@buffalo.edu>[m
+Date:   Wed Feb 13 17:49:40 2013 -0500[m
+[m
+    New.[m
+[m
+commit c6bc0dafc560b34ea8dc27a9530281d76a0a459a[m
+Author: Geoffrey Challen <challen@buffalo.edu>[m
+Date:   Wed Feb 13 17:40:31 2013 -0500[m
+[m
+    Fixes to driver code; make Eclipse shut up in thread.c.[m
+:[K[K[m
+commit f5f7f22a7ea1cc0e2dc417f1c6b997292330a7ab[m
+Author: Geoffrey Challen <challen@buffalo.edu>[m
+Date:   Fri Feb 8 11:10:24 2013 -0500[m
+[m
+    Adding gitignore to base distribution.[m
+[m
+commit 4d60167b322dd0c813cacd000c435c925c3e6912[m
+Author: ops-class.org Student <trinity@zion.(none)>[m
+Date:   Wed Jan 23 19:55:17 2013 -0500[m
+[m
+    Fixed a bug where unused was set but not being used[m
+[m
+commit 56008a84adaa77b87d05ac4e1248e6c6fcc4c8a9[m
+Author: Geoffrey Challen <challen@buffalo.edu>[m
+Date:   Fri Mar 23 22:22:01 2012 -0400[m
+[m
+    Adding file only test.[m
+[m
+commit 4de6391cb5b1ed5ab7c2042a28c3c2c539661b71[m
+Author: Geoffrey Challen <challen@buffalo.edu>[m
+Date:   Fri Mar 23 22:20:57 2012 -0400[m
+[m
+:[K[K[?1l>]0;trinity@zion: ~/srctrinity@zion:~/src$ git tag
+patch_target
+]0;trinity@zion: ~/srctrinity@zion:~/src$ git diff patch [K_target
+[?1h=diff --git a/kern/startup/main.c b/kern/startup/main.c[m
+index be4c4b8..1e08ca3 100644[m
+--- a/kern/startup/main.c[m
++++ b/kern/startup/main.c[m
+@@ -1,3 +1,4 @@[m
++/* paulnico */[m
+ /*[m
+  * Copyright (c) 2000, 2001, 2002, 2003, 2004, 2005, 2008, 2009[m
+  *     The President and Fellows of Harvard College.[m
+[K[?1l>]0;trinity@zion: ~/srctrinity@zion:~/src$ git tag -a "asst0-start" -m "ASST0 start." 3921f5
+]0;trinity@zion: ~/srctrinity@zion:~/src$ git tag -a "asst0-start" -m "ASST0 start." 3921f5[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[28Pdiff patch_targettag[K
+asst0-start
+patch_target
+]0;trinity@zion: ~/srctrinity@zion:~/src$ git diff asst0-start
+[?1h=diff --git a/kern/startup/main.c b/kern/startup/main.c[m
+index be4c4b8..1e08ca3 100644[m
+--- a/kern/startup/main.c[m
++++ b/kern/startup/main.c[m
+@@ -1,3 +1,4 @@[m
++/* paulnico */[m
+ /*[m
+  * Copyright (c) 2000, 2001, 2002, 2003, 2004, 2005, 2008, 2009[m
+  *     The President and Fellows of Harvard College.[m
+[K[?1l>]0;trinity@zion: ~/srctrinity@zion:~/src$ git reset --a[Khart[Kd asst0-start
+HEAD is now at 3921f59 Refactoring spinner and yielder code.
+]0;trinity@zion: ~/srctrinity@zion:~/src$ dit[K[K[Kgit diff
+[?1h=[K[?1l>]0;trinity@zion: ~/srctrinity@zion:~/src$ git diffreset --hard asst0-start[8Pdiff[C[C[C[C[C[C[C[C[C[C[C[C
+[?1h=[K[?1l>]0;trinity@zion: ~/srctrinity@zion:~/src$ dit st[K[K[K[K[K[Kgit status
+# On branch master
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	kern/startup/main.test
+#	typescript
+nothing added to commit but untracked files present (use "git add" to track)
+]0;trinity@zion: ~/srctrinity@zion:~/src$ cd kern/startup/[K
+]0;trinity@zion: ~/src/kern/startuptrinity@zion:~/src/kern/startup$ ls
+main.c  main.test  menu.c
+]0;trinity@zion: ~/src/kern/startuptrinity@zion:~/src/kern/startup$ rm main.test
+]0;trinity@zion: ~/src/kern/startuptrinity@zion:~/src/kern/startup$ ls
+main.c  menu.c
+]0;trinity@zion: ~/src/kern/startuptrinity@zion:~/src/kern/startup$ git status
+# On branch master
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	../../typescript
+nothing added to commit but untracked files present (use "git add" to track)
+]0;trinity@zion: ~/src/kern/startuptrinity@zion:~/src/kern/startup$ cd -
+/home/trinity/src
+]0;trinity@zion: ~/srctrinity@zion:~/src$ more typescript 
+Script started on Mon 03 Feb 2014 03:14:54 PM EST
+]0;trinity@zion: ~/srctrinity@zion:~/src$ psmap
+No command 'psmap' found, did you mean:
+ Command 'smap' from package 'slurm-llnl' (universe)
+ Command 'pscap' from package 'libcap-ng-utils' (universe)
+ Command 'pmap' from package 'procps' (main)
+ Command 'gpsmap' from package 'kismet' (universe)
+psmap: command not found
+]0;trinity@zion: ~/srctrinity@zion:~/src$ pmap
+pmap: argument missing
+]0;trinity@zion: ~/srctrinity@zion:~/src$ ps
+  PID TTY          TIME CMD
+ 3098 pts/2    00:00:00 bash
+ 3151 pts/2    00:00:00 ps
+]0;trinity@zion: ~/srctrinity@zion:~/src$ gpsmap
+The program 'gpsmap' is currently not installed. You can install it by typing:
+sudo apt-get install kismet
+]0;trinity@zion: ~/srctrinity@zion:~/src$ exit
+exit
+
+Script done on Mon 03 Feb 2014 03:15:42 PM EST
+]0;trinity@zion: ~/srctrinity@zion:~/src$ rm typescript
+]0;trinity@zion: ~/srctrinity@zion:~/src$ ls
+[0m[01;34mbuild[0m    [01;34mcommon[0m     defs.mk  [01;34mkern[0m      [01;34mman[0m  [01;34muser[0m
+CHANGES  [01;32mconfigure[0m 
